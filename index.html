@@ -3,245 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Cleaning Services</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .site-header {
-            background-color: #007BFF;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .site-header h1 {
-            font-size: 36px;
-        }
-
-        .site-header nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .site-header nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        .site-header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-
-        .contact-info h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .address,
-        .email,
-        .phone,
-        .map {
-            flex-basis: calc(25% - 20px);
-            text-align: center;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .map iframe {
-            width: 100%;
-            height: 300px;
-            border: none;
-        }
-
-        .services {
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .services h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .service-box {
-            background-color: #f5f5f5;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-box h3 {
-            font-size: 20px;
-        }
-
-        .site-footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #007BFF;
-            color: #fff;
-        }
-
-        /* Add this CSS for an attractive social media section */
-        .social-media {
-            background-color: #007BFF;
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .social-media h2 {
-            color: #fff;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .social-media ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .social-media ul li {
-            margin-right: 20px;
-        }
-
-        .social-media ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            transition: all 0.3s;
-        }
-
-        .social-media ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .social-media ul li a i {
-            margin-right: 10px;
-            font-size: 28px;
-        }
-
-        .social-media ul li a:hover {
-            color: #ffdc00;
-        }
-
-        /* Add this CSS for responsive iframes */
-        .video-container,
-        .map-container {
-            position: relative;
-            overflow: hidden;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio (adjust as needed) */
-            width: 100%;
-        }
-
-        .video-container iframe,
-        .map-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        /* Add this CSS to make the site 100% width on mobile */
-@media (max-width: 768px) {
-    body {
-        width: 100%;
-    }
-}
-
-    </style>
 </head>
 <body>
-    <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Cleaning Service</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="site-header bg-primary text-white text-center py-4">
         <h1>Cleaning Service at Your DoorStep</h1>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#services">Services</a></li>
+                <li class="list-inline-item"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="contact-info" id="contact">
-        <div class="contact-details">
-            <h2>Contact Information</h2>
-            <p>Hydra Clean LLC</p>
-            <p>600 W Scooba St, Hattiesburg, MS 39401</p>
-            <p>(601) 336-2411</p>
-            <a href="mailto:info@myhydraclean.com">info@myhydraclean.com</a>
+        <div class="container">
+            <h2 class="text-center">Contact Information</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="address bg-light p-4">
+                        <p>Hydra Clean LLC</p>
+                        <p>600 W Scooba St, Hattiesburg, MS 39401</p>
+                        <p>(601) 336-2411</p>
+                        <a href="mailto:info@myhydraclean.com">info@myhydraclean.com</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="services" id="services">
-        <h2>Our Services</h2>
-        <p>Introducing our comprehensive range of Professional cleaning services at <a href="https://myhydraclean.com">Hydra Clean</a>. We take pride in delivering top-tier cleaning solutions that are tailored to meet your specific needs. Whether it's residential or commercial cleaning, carpet and upholstery cleaning, tile and grout cleaning, or pet odor removal, our experienced team is committed to ensuring your space is not just clean, but also healthy and inviting. Let us take care of the cleaning, so you can enjoy the benefits of a pristine and fresh environment.</p>
-        <div class="service-box">
-            <h3>Carpet Cleaning</h3>
-            <p>Our professional carpet cleaning services are designed to revitalize your carpets, removing deep-seated dirt, stains, and allergens to leave your space looking and feeling fresh. Our experienced technicians use cutting-edge equipment and environmentally friendly solutions to ensure thorough cleaning, stain removal, odor elimination, and allergen control. With quick drying times and flexible scheduling options, we make the process convenient for you, offering not just clean carpets but also a healthier living or working environment. Choose us for a transformation that preserves the beauty and longevity of your carpets while enhancing the overall cleanliness of your space.</p>
-        </div>
-        <div class="service-box">
-            <h3>Upholstery Cleaning</h3>
-            <p>Our professional upholstery cleaning services are dedicated to renewing the appearance and comfort of your furniture. Over time, upholstery can accumulate dirt, stains, and allergens, affecting the aesthetics and hygiene of your home or office. We specialize in deep cleaning all types of upholstery, from sofas and chairs to drapes and curtains.</p>
-        </div>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/YnZo3LcbhRw?rel=0" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="social-media">
-            <h2>Follow Us</h2>
-            <ul>
-                <li><a href="https://www.facebook.com/hydracleanllc" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-                <li><a href="https://twitter.com/hydracleanms" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                <li><a href="https://www.youtube.com/channel/UCFdjVAKh7h6nCcJTxMhqwpg" target="_blank"><i class="fab fa-youtube"></i> Youtube</a></li>
-                <li><a href="https://www.linkedin.com/in/alan-west-50778287" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></li>
-                <li><a href="https://sites.google.com/view/hydracleancarpetcleaning/home?fbclid=IwAR3aVjCBtje5eUemBTRJpCIMb48-kAlMsfV7r5wGnFFh-U5TadlcVtlz7NM" target="_blank"><i class="fab fa-google"></i> Google Site</a></li>
-                <li><a href="https://www.google.com/maps?cid=17569261491206507296&fbclid=IwAR1wD197LzscJ8Jks5_TvJ9NxtkZ5-1caWbr_ccXsY1f8VqHwlSbxo8qO38" target="_blank"><i class="fab fa-globe"></i> Map</a></li>
-            </ul>
-        </div>
-        <div class="service-box">
-            <h3>Tile & Grout Cleaning</h3>
-            <p>Our tile and grout cleaning services are your solution for restoring the beauty and cleanliness of your tiled surfaces. Over time, grime, dirt, and moisture can accumulate, leading to discolored and grimy grout lines and dull-looking tiles. We specialize in revitalizing a wide range of tiled areas, from kitchen floors and bathroom walls to entryway tiles and outdoor patios.</p>
-        </div>
-        <div class="service-box">
-            <h3>Pet Odor Removal</h3>
-            <p>Our pet odor removal services are designed to help you reclaim a fresh and odor-free living environment, even in homes with furry family members. While we adore our pets, they can sometimes leave behind unwanted odors that are challenging to eliminate with ordinary cleaning products. That's where we come in.</p>
+        <div class="container">
+            <h2 class="text-center">Our Services</h2>
+            <p class="text-center">
+                Introducing our comprehensive range of Professional cleaning services at
+                <a href="https://myhydraclean.com">Hydra Clean</a>. We take pride in delivering top-tier cleaning solutions that are tailored to meet your specific needs.
+                Whether it's residential or commercial cleaning, carpet and upholstery cleaning, tile and grout cleaning, or pet odor removal, our experienced team is committed to ensuring your space is not just clean, but also healthy and inviting.
+                Let us take care of the cleaning, so you can enjoy the benefits of a pristine and fresh environment.
+            </p>
+            <div class="service-box bg-light border p-4 mb-4">
+                <h3>Carpet Cleaning</h3>
+                <p>
+                    Our professional carpet cleaning services are designed to revitalize your carpets, removing deep-seated dirt, stains, and allergens to leave your space looking and feeling fresh. Our experienced technicians use cutting-edge equipment and environmentally friendly solutions to ensure thorough cleaning, stain removal, odor elimination, and allergen control. With quick drying times and flexible scheduling options, we make the process convenient for you, offering not just clean carpets but also a healthier living or working environment. Choose us for a transformation that preserves the beauty and longevity of your carpets while enhancing the overall cleanliness of your space.
+                </p>
+            </div>
+            <div class="service-box bg-light border p-4 mb-4">
+                <h3>Upholstery Cleaning</h3>
+                <p>
+                    Our professional upholstery cleaning services are dedicated to renewing the appearance and comfort of your furniture. Over time, upholstery can accumulate dirt, stains, and allergens, affecting the aesthetics and hygiene of your home or office. We specialize in deep cleaning all types of upholstery, from sofas and chairs to drapes and curtains.
+                </p>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/YnZo3LcbhRw?rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="service-box bg-light border p-4 mb-4">
+                <h3>Tile & Grout Cleaning</h3>
+                <p>
+                    Our tile and grout cleaning services are your solution for restoring the beauty and cleanliness of your tiled surfaces. Over time, grime, dirt, and moisture can accumulate, leading to discolored and grimy grout lines and dull-looking tiles. We specialize in revitalizing a wide range of tiled areas, from kitchen floors and bathroom walls to entryway tiles and outdoor patios.
+                </p>
+            </div>
+            <div class="service-box bg-light border p-4 mb-4">
+                <h3>Pet Odor Removal</h3>
+                <p>
+                    Our pet odor removal services are designed to help you reclaim a fresh and odor-free living environment, even in homes with furry family members. While we adore our pets, they can sometimes leave behind unwanted odors that are challenging to eliminate with ordinary cleaning products. That's where we come in.
+                </p>
+            </div>
         </div>
     </section>
 
-    <div class="map-container">
+    <div class="container">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.518280290944!2d-89.30834949999999!3d31.317056799999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x889cdd90ab09392b%3A0x7080535f457039ba!2sHydra%20Clean%20Carpet%20Cleaning!5e0!3m2!1sen!2s!4v1698848325889!5m2!1sen!2s" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
-    <footer class="site-footer">
+    <section class="social-media bg-primary text-center py-4">
+        <div class="container">
+            <h2 class="text-white">Follow Us</h2>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="https://www.facebook.com/hydracleanllc" target="_blank" class="text-white"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li class="list-inline-item"><a href="https://twitter.com/hydracleanms" target="_blank" class="text-white"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCFdjVAKh7h6nCcJTxMhqwpg" target="_blank" class="text-white"><i class="fab fa-youtube"></i> Youtube</a></li>
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/alan-west-50778287" target="_blank" class="text-white"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+                <li class="list-inline-item"><a href="https://sites.google.com/view/hydracleancarpetcleaning/home?fbclid=IwAR3aVjCBtje5eUemBTRJpCIMb48-kAlMsfV7r5wGnFFh-U5TadlcVtlz7NM" target="_blank" class="text-white"><i class="fab fa-google"></i> Google Site</a></li>
+                <li class="list-inline-item"><a href="https://www.google.com/maps?cid=17569261491206507296&fbclid=IwAR1wD197LzscJ8Jks5_TvJ9NxtkZ5-1caWbr_ccXsY1f8VqHwlSbxo8qO38" target="_blank" class="text-white"><i class="fab fa-globe"></i> Map</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="site-footer text-center py-4 bg-primary text-white">
         <p>&copy; 2023 MyHydraClean</p>
     </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
